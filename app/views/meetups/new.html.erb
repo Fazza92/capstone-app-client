@@ -1,0 +1,21 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag "/client/meetups", method: :post do %>
+  <div>
+    Name: <input type="text" name="name" value="<%= @meetup['name'] %>" />
+  </div>
+  <div>
+    Start Time: <input type="text" name="price" value="<%= @product['start_time'] %>" />
+  </div>
+  <div>
+    End Time: <input type="text" name="description" value="<%= @product['end_time'] %>" />
+  </div>
+  
+  <input type="submit" name="" value="Create Meetup" />
+<% end %>

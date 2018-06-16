@@ -1,0 +1,21 @@
+<h2><%= @meetup["name"] %></h2>
+<!-- Add a [formatted below] -->
+<h4>Start Time: <%= @meetup["start_time"] %></h4>
+<!-- Add a [formatted below] -->
+<h4>End Time: <%= @meetup["end_time"] %></h4>
+
+<!-- Add a description here -->
+
+<br>
+<%= form_tag "/client/meetups", method: :post do %>
+  <input type="hidden" name="meetup_id" value="<%= @meetup['id'] %>">
+  <div>
+    Description: <input type="text" name="description">
+  </div>
+  <input type="submit" value="Add to Description">
+<% end %>
+
+<!-- Might need to add meetup id here later -->
+
+<a href="/client/meetups/<%= @meetup['id'] %>/edit">Edit</a>
+<a href="/client/meetups/<%= @meetup['id'] %>" data-method="delete">Delete</a>
