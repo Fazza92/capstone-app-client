@@ -1,0 +1,21 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag "/client/events", method: :post do %>
+  <div>
+    Name: <input type="text" name="name" value="<%= @event['name'] %>" />
+  </div>
+  <div>
+    Location: <input type="text" name="location" value="<%= @event['location'] %>" />
+  </div>
+  <div>
+    Description: <input type="text" name="description" value="<%= @event['description'] %>" />
+  </div>
+  
+  <input type="submit" name="" value="Create Event" />
+<% end %>

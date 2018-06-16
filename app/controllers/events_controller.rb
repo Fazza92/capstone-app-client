@@ -79,4 +79,6 @@ class EventsController < ApplicationController
     flash[:success] = "Successfully destroyed Event"
     redirect_to "/client/events"
     end
+  end
 end
+

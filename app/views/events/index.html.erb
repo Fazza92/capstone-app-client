@@ -1,1 +1,14 @@
-<h1>Testing</h1>
+<ul>
+  <li>
+    All Events
+    <ul>
+      <li><a href="api/events">Date Added - Newest to Oldest</a></li>
+      <li><a href="api/events">Date Added - Oldest to Newest</a></li>
+    </ul>
+  </li>
+</ul>
+
+<%= form_tag "/client/events", method: :get do %>
+  <input type="text" name="search">
+  <input type="submit" value="Search">
+<% end %>
