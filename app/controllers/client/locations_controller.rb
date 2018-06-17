@@ -31,11 +31,21 @@ class Client::LocationsController < ApplicationController
                             "http://localhost:3000/api/locations",
                             parameters: @location
                             )
+
+    if response.code == 200
+      redirect_to '/client/locations'
+    elsif response.code == 401
+      redirect_to '/client/locations/1'
+    else
+      @errors = response.body['errors']
+      render 'new.html.erb'
+    end
+
   end
 
   def show
     location_id = params[:id]
-    response = Unirest.get("http://localhost:3000/api/locations/#{event_id}")
+    response = Unirest.get("http://localhost:3000/api/locations/#{location_id}")
     @location = response.body
     render 'show.html.erb'
   end

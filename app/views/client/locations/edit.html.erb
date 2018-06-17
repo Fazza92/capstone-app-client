@@ -1,0 +1,13 @@
+<%= form_tag "/client/locations/#{@location["id"]}", method: :patch do %>
+  <div>
+    Name: <input type="text" name="name" value="<%= @location["name"] %>" />
+  </div>
+  <div>
+    Longitude: <input type="text" name="longitude" value="<%= @location["longitude"] %>" />
+  </div>
+  <div>
+    Latitude: <input type="text" name="latitude" value="<%= @location["latitude"] %>" />
+  </div>
+ 
+  <input type="submit" name="" value="Update Location"/>
+<% end %>

@@ -23,7 +23,8 @@ class MeetupsController < ApplicationController
     @meetup = {
                    'name' => params[:name],
                    'start_time' => params[:start_time],
-                   'end_time' => params[:end_time]
+                   'end_time' => params[:end_time],
+                   'description' => params[:description]
                   
                   }
 
@@ -78,7 +79,7 @@ end
       redirect_to "/client/meetups"
       else
       flash[:warning] = "You are not Authorized"
-      end
+    end
     flash[:success] = "Successfully destroyed Meetup"
     redirect_to "/client/meetups"
     end

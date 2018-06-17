@@ -1,0 +1,10 @@
+<ul>
+  <li>
+    All Locations
+  </li>
+</ul>
+
+<%= form_tag "/client/locations", method: :get do %>
+  <input type="text" name="search">
+  <input type="submit" value="Search">
+<% end %>

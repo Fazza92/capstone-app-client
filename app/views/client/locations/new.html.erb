@@ -8,7 +8,7 @@
 
 <%= form_tag "/client/locations", method: :post do %>
   <div>
-    Name: <input type="text" name="name" value="<%= @event['name'] %>" />
+    Name: <input type="text" name="name" value="<%= @location['name'] %>" />
   </div>
   <div>
     Longitude: <input type="text" name="longitude" value="<%= @location['longitude'] %>" />
