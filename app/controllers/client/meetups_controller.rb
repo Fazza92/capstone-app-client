@@ -1,4 +1,4 @@
-class MeetupsController < ApplicationController
+class  Client::MeetupsController < ApplicationController
   def index
     client_params = {
                      meetup_id: params[:meetup_id],

@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class Client::EventsController < ApplicationController
   def index
      client_params = {
                      search: params[:search],

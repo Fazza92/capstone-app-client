@@ -81,12 +81,11 @@ class Client::LocationsController < ApplicationController
     def destroy
       response = Unirest.delete("http://localhost:3000/api/locations/#{params['id']}")
       if response.code == 200
-      flash[:success] = "Successfully updated Locations"
-      redirect_to "/client/locations"
+      flash[:success] = "Successfully destroyed Location"
+      # redirect_to "/client/locations"
       else
       flash[:warning] = "You are not Authorized"
       end
-    flash[:success] = "Successfully destroyed Location"
     redirect_to "/client/locations"
     end
   end

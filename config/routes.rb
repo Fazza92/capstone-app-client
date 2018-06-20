@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post "/login" => "sessions#create"
   delete "/logout" => "sessions#destroy"
 
+  namespace :client do
+    resources :meetups
   get '/' => 'client/meetups#index'
     get  '/client/meetups' => 'meetups#index'
     get  '/client/meetups/new' => 'meetups#new'
@@ -14,7 +16,8 @@ Rails.application.routes.draw do
     get  '/client/meetups/:id/edit' => 'meetups#edit'
     patch '/client/meetups/:id' => 'meetups#update'
     delete '/client/meetups/:id' => 'meetups#destroy'
-  
+
+  resources :events
     get '/client/events' => 'events#index'
     get '/client/events/new' => 'events#new'
     post '/client/events' => 'events#create'
@@ -23,7 +26,6 @@ Rails.application.routes.draw do
     patch '/client/events/:id' => 'events#update'
     delete '/client/events/:id' => 'events#destroy'
 
-  namespace :client do
     resources :locations
       get '/client/locations' => 'locations#index'
       get '/client/locations/new' => 'locations#new'
