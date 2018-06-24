@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"
   delete "/logout" => "sessions#destroy"
+  get '/' => 'client/meetups#index'
 
   namespace :client do
     resources :meetups
-  get '/' => 'client/meetups#index'
     get  '/client/meetups' => 'meetups#index'
     get  '/client/meetups/new' => 'meetups#new'
     post '/client/meetups' => 'meetups#create'

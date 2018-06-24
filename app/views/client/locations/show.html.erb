@@ -10,10 +10,7 @@
 <br>
 <%= form_tag "/client/locations", method: :post do %>
   <input type="hidden" name="location_id" value="<%= @location['id'] %>">
-  <div>
-    Description: <input type="text" name="description">
-  </div>
-  <input type="submit" value="Add to Location">
+
 <% end %>
 
 <!-- Might need to add meetup id here later -->

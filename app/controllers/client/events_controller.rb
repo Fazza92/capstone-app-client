@@ -68,16 +68,15 @@ class Client::EventsController < ApplicationController
       render 'edit.html.erb'
     end
 
-    def destroy
-      response = Unirest.delete("http://localhost:3000/api/events/#{params['id']}")
-      if response.code == 200
-      flash[:success] = "Successfully updated Event"
+  end
+
+  def destroy
+    response = Unirest.delete("http://localhost:3000/api/events/#{params['id']}")
+    if response.code == 200
+      flash[:success] = "Successfully destroyed Event"
       redirect_to "/client/events"
-      else
+    else
       flash[:warning] = "You are not Authorized"
-      end
-    flash[:success] = "Successfully destroyed Event"
-    redirect_to "/client/events"
     end
   end
 end

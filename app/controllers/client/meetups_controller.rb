@@ -48,12 +48,12 @@ class  Client::MeetupsController < ApplicationController
   end
 
   def update
-      @meetup = {
+    @meetup = {
                    'name' => params[:name],
                    'start_time' => params[:start_time],
                    'end_time' => params[:end_time],
-                   # 'location' => params[:location],
-                   # 'description' => params[:supplier_id]
+                   'description' => params[:description]
+
                   }
 
     response = Unirest.patch(
@@ -62,7 +62,7 @@ class  Client::MeetupsController < ApplicationController
                             )
 
     if response.code == 200
-      flash[:success] = "Successfully updated Product"
+      flash[:success] = "Successfully updated Meetup"
       redirect_to "/client/meetups/#{params[:id]}"
     elsif response.code == 402
         flash[:warning] = "You are not Authorized"
@@ -70,17 +70,16 @@ class  Client::MeetupsController < ApplicationController
       @errors = response.body['errors']
       render 'edit.html.erb'
     end
-end
 
-    def destroy
-      response = Unirest.delete("http://localhost:3000/api/meetups/#{params['id']}")
-      if response.code == 200
-      flash[:success] = "Successfully updated Meetup"
-      # redirect_to "/client/meetups"
-      else
+  end
+
+  def destroy
+    response = Unirest.delete("http://localhost:3000/api/meetups/#{params['id']}")
+    if response.code == 200
+      flash[:success] = "Successfully destroyed Meetup"
+      redirect_to "/client/meetups"
+    else
       flash[:warning] = "You are not Authorized"
     end
-    flash[:success] = "Successfully destroyed Meetup"
-    redirect_to "/client/meetups"
-    end
+  end
 end
