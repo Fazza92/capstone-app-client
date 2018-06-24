@@ -34,5 +34,9 @@ Rails.application.routes.draw do
       get '/client/locations/:id/edit' => 'locations#edit'
       patch '/client/locations/:id' => 'locations#update'
       delete '/client/locations/:id' => 'locations#destroy'
+
+      get 'attendances' => 'attendances#index'
+      post 'attendances' => 'attendances#create'
+      delete 'attendances/:id' => 'attendances#destroy'
   end
 end

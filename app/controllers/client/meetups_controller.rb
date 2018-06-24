@@ -76,7 +76,7 @@ end
       response = Unirest.delete("http://localhost:3000/api/meetups/#{params['id']}")
       if response.code == 200
       flash[:success] = "Successfully updated Meetup"
-      redirect_to "/client/meetups"
+      # redirect_to "/client/meetups"
       else
       flash[:warning] = "You are not Authorized"
     end

@@ -30,5 +30,5 @@ def destroy
   session[:jwt] = nil
   flash[:success] = 'Successfully logged out!'
   redirect_to '/login'
-end
+  end
 end

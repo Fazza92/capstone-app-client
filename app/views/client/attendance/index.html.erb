@@ -1,0 +1,7 @@
+<h2>Your Meetups</h2>
+
+<% attendances.each do |attendance| %>
+  <p>
+    <%= attendance["user"]["user_id"] %>
+  </p>
+<% end %>
