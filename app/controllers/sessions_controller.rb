@@ -18,6 +18,8 @@ def create
   
   if response.code == 201
     session[:jwt] = response.body["jwt"]
+    session[:user_id] = response.body["user"]["id"]
+
     flash[:success] = 'Successfully logged in!'
     redirect_to '/'
   else
@@ -28,6 +30,8 @@ end
 
 def destroy
   session[:jwt] = nil
+  session[:user_id] = nil
+
   flash[:success] = 'Successfully logged out!'
   redirect_to '/login'
   end

@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
       Unirest.clear_default_headers()
     end
   end
+
+  def current_user_id
+    @current_user_id ||= session["user_id"]
+  end
+  helper_method :current_user_id
+
 end

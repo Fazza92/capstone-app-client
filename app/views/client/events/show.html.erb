@@ -4,7 +4,6 @@
 <!-- Add a [formatted below] -->
 <h4>Description: <%= @event["description"] %></h4>
 
-
 <br>
 <%= form_tag "/client/events", method: :post do %>
   <input type="hidden" name="event_id" value="<%= @event['id'] %>">

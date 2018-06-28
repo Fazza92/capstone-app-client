@@ -9,13 +9,15 @@ class Client::AttendancesController < ApplicationController
 
   def create
     client_params = {
-                      meetup_id: params[:meetup_id]
+                      user_id: params[:user_id],
+                      meetup_id: params[:meetup_id],
+                      status: "Going to attend"
                     }
 
     response = Unirest.post("http://localhost:3000/attendances", parameters: client_params)
     
     @attendance = response.body
-    redirect_to '/client/attendances'                
+    redirect_to "/users/#{user_id}"                
   end
 
   def destroy

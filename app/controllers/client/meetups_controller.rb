@@ -10,7 +10,7 @@ class  Client::MeetupsController < ApplicationController
                            "http://localhost:3000/api/meetups",
                            parameters: client_params
                            )
-    @products = response.body
+    @meetups = response.body
     render 'index.html.erb'
   end
 

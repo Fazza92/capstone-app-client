@@ -1,8 +1,10 @@
+<p>Events:</p>
 <ul>
-  <li>
-    All Events
-  </li>
+  <% @events.each do |event| %>
+    <li><%= event['name'] %></li>
+  <% end %>
 </ul>
+
 
 <%= form_tag "/client/events", method: :get do %>
   <input type="text" name="search">

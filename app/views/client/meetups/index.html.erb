@@ -1,7 +1,8 @@
+<p>Meetups:</p>
 <ul>
-  <li>
-    All Meetups
-  </li>
+  <% @meetups.each do |meetup| %>
+    <li><%= meetup['name'] %></li>
+  <% end %>
 </ul>
 
 

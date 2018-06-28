@@ -7,17 +7,14 @@
 <h4>Description: <%= @meetup["description"] %></h4>
 
 
-<!-- Add a description here -->
-
 <br>
-<%= form_tag "/client/meetups", method: :post do %>
+<%= form_tag "/client/attendances", method: :post do %>
   <input type="hidden" name="meetup_id" value="<%= @meetup['id'] %>">
 
 
   <input type="submit" value="Join Meetup">
 <% end %>
 
-<!-- Might need to add meetup id here later -->
 
 <a href="/client/meetups/<%= @meetup['id'] %>/edit">Edit</a>
 <a href="/client/meetups/<%= @meetup['id'] %>" data-method="delete">Delete</a>

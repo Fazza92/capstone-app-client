@@ -1,7 +1,8 @@
+<p>Locations:</p>
 <ul>
-  <li>
-    All Locations
-  </li>
+  <% @locations.each do |location| %>
+    <li><%= location['name'] %></li>
+  <% end %>
 </ul>
 
 <%= form_tag "/client/locations", method: :get do %>
