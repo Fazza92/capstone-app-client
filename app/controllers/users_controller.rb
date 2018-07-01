@@ -3,6 +3,13 @@ class UsersController < ApplicationController
   render 'new.html.erb'
 end
 
+def show
+  user_id = params[:id]
+  response = Unirest.get("http://localhost:3000/api/users/#{user_id}")
+  @user = response.body
+  render 'show.html.erb'
+end
+
 def create
   client_params = {
                     name: params[:name],

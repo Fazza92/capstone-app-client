@@ -14,10 +14,10 @@ class Client::AttendancesController < ApplicationController
                       status: "Going to attend"
                     }
 
-    response = Unirest.post("http://localhost:3000/attendances", parameters: client_params)
+    response = Unirest.post("http://localhost:3000/api/attendances", parameters: client_params)
     
     @attendance = response.body
-    redirect_to "/users/#{user_id}"                
+    redirect_to "/client/users/#{params[:user_id]}"                
   end
 
   def destroy

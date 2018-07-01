@@ -10,6 +10,7 @@
 <br>
 <%= form_tag "/client/attendances", method: :post do %>
   <input type="hidden" name="meetup_id" value="<%= @meetup['id'] %>">
+  <input type="hidden" name="user_id" value=1>
 
 
   <input type="submit" value="Join Meetup">

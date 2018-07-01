@@ -1,5 +1,13 @@
-<h1><%= @meetups['name']['current_user_id'] %>Name</h1>
-<h1><%= @user['email'] %>Email</h1>
+<h2>Your Meetups</h2>
+<%= @user['name'] %>
+
+<% @user.meetups.each do |meetup| %>
+  <p>
+    <%= meetup["name"] %>
+    <%= meetup["start_time"] %>
+    <%= meetup["end_time"] %>
+  </p>
+<% end %>
 
 
 
