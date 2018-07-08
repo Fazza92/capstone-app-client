@@ -1,7 +1,5 @@
 <h2>Name: <%= @event["name"] %></h2>
-<!-- Add a [formatted below] -->
 <h4>Location: <%= @event["location"] %></h4>
-<!-- Add a [formatted below] -->
 <h4>Description: <%= @event["description"] %></h4>
 
 <br>
@@ -10,7 +8,15 @@
 
 <% end %>
 
-<!-- Might need to add meetup id here later -->
 
 <a href="/client/events/<%= @event['id'] %>/edit">Edit</a>
 <a href="/client/events/<%= @event['id'] %>" data-method="delete">Delete</a>
+
+<br>
+
+<img src="<%= @apod["url"] %>">
+<p><%= @apod["explanation"] %></p>
+
+
+
+

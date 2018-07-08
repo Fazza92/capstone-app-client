@@ -37,6 +37,9 @@ class Client::EventsController < ApplicationController
     event_id = params[:id]
     response = Unirest.get("http://localhost:3000/api/events/#{event_id}")
     @event = response.body
+
+    response_2 = Unirest.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+    @apod = response_2.body
     render 'show.html.erb'
   end
 
