@@ -4,7 +4,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Login</title>
+        <title>Star Map</title>
         <!--plugins-->
         <link href="assets/css/plugins/plugins.css" rel="stylesheet">
         <!--Custom css-->
@@ -15,7 +15,7 @@
             <div id="preloader-inner"></div>
         </div><!--/preloader-->
 
-        <header class="header header-sticky header-light">
+    <header class="header header-sticky header-light">
             <nav class="navbar navbar-expand-lg yamm">
                 <div class="container">
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,62 +26,39 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="dropdown nav-item">
-                                <a href="index.html" class="dropdown-toggle nav-link" data-toggle="dropdown">Home</a> 
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Home</a> 
+                              
                             </li>
                             <li class="dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Calendar</a>
-
+                                
                             </li>
                             <li class=" dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Meetups</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="blog-full.html">Blog Full width</a></li>
-                                    <li><a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a></li>  
-                                    <li><a class="dropdown-item" href="blog-masonry.html">Blog Masonry</a></li>
-                                    <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-                                </ul>
+                             
                             </li>
                             <!--mega menu-->
                             <li class="dropdown dropdown-fw nav-item active">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Star Map  <i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <div class="yamm-content">
-                                            <div class="row">
-                                                <div class="col-lg-3">
-                                                    <h3 class="heading">Pages 1</h3>
-\
-
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <h3 class="heading">Pages 2 </h3>
-                                                    <ul class="mega-vertical-nav list-unstyled">
-                                                        <li><a class="dropdown-item" href="page-fullwidth.html">Full Width</a></li>
-                                                        <li><a class="dropdown-item" href="page-leftbar.html">Left Sidebar</a></li>
-                                                        <li><a class="dropdown-item" href="page-rightbar.html">Right Sidebar</a></li>
-                                                        <li><a class="dropdown-item" href="faqs.html">Faqs</a></li>
-                                                        <li><a class="dropdown-item" href="page-error.html">Error 404</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <h3 class="heading">Features</h3>
-
-                                                </div>
-                                                <div class="col-lg-2">
-                                                    <img src="assets/img/ipad.png" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                           
                             </li> 
                             <li class=" dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Contact</a>
-                               
+                             
                             </li>
                         </ul>
                     </div>
+                    <div class="right-search ml-4 dropdown">
 
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <form class="form-inline">
+                                <input type="text" placeholder="Search" class="form-control">
+                                <button type="button" class="form-search-button">
+                                    <i class="ion-ios-search-strong"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </nav><!--nav end-->
         </header>
@@ -89,35 +66,47 @@
         <section id="content-region-3" class="padding-40 page-tree-bg">
             <div class="container">
                 <h3 class="page-tree-text">
-                    Login into your account
+                    Star Map
                 </h3>
             </div>
         </section><!--page-tree end here-->
         <div class="space-70"></div>
 
-     <div class="container">
+      <div class="container popup-container mb50">
+           <div class="row">
+               <div class="col-md-4  margin-btm-20">
+                   <a href="assets/img/work/work-1.jpg">
+                       <img src="assets/img/work/work-1.jpg" alt="" class="img-fluid">
+                   </a>
+               </div>
+               <div class="col-md-4  margin-btm-20">
+                   <a href="assets/img/work/work-2.jpg">
+                       <img src="assets/img/work/work-2.jpg" alt="" class="img-fluid">
+                   </a>
+               </div>
+               <div class="col-md-4  margin-btm-20">
+                   <a href="assets/img/work/work-3.jpg">
+                       <img src="assets/img/work/work-3.jpg" alt="" class="img-fluid">
+                   </a>
+               </div>
+           </div>
             <div class="row">
-                <div class="col-lg-6  ml-auto mr-auto">
-                    <div class="my-login-form">
-                        <form>
-                            <h4 class="text-uppercase">Login</h4><hr>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email..">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password..">
-                            </div>
-                            <div class=" text-right">
-                                <button type="submit" class="btn theme-btn-color">Login</button>
-                            </div>
-                            <hr>
-                            <div class="form-btm-link text-center">
-                                <a href="#">Lost password?</a><span>Or</span><a href="signup.html">Create new account</a>
-                            </div>
-                        </form><!--login form end-->
-                    </div>
-                </div>
-            </div>
+               <div class="col-md-4  margin-btm-20">
+                   <a href="assets/img/work/work-4.jpg">
+                       <img src="assets/img/work/work-4.jpg" alt="" class="img-fluid">
+                   </a>
+               </div>
+               <div class="col-md-4  margin-btm-20">
+                   <a href="assets/img/work/work-5.jpg">
+                       <img src="assets/img/work/work-5.jpg" alt="" class="img-fluid">
+                   </a>
+               </div>
+               <div class="col-md-4 margin-btm-20">
+                   <a href="assets/img/work/work-6.jpg">
+                       <img src="assets/img/work/work-6.jpg" alt="" class="img-fluid">
+                   </a>
+               </div>
+           </div>
         </div>
         
         <div class="space-70"></div>
@@ -125,9 +114,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 margin-btm-20">
-
+                 
                         <div class="space-20"></div>
-
+                      
                         <div class="space-20"></div>
                         <div class="footer-col">
                             <h3>Follow us</h3>
@@ -141,9 +130,7 @@
                         </div><!--footer social col-->
                     </div><!--col-4 end-->
                     <!--latest post col end-->
-                    <div class="col-md-5">
-                        
-                    </div><!--get in touch col end-->
+                    <!--get in touch col end-->
                 </div><!--footer main row end-->  
                 <div class="space-70"></div>
                 <div class="row">

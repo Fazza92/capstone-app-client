@@ -339,7 +339,7 @@ small {
 /**********back to top*************/
 .scrollToTop {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   background: transparent;
   font-weight: bold;
   color: #32d2ba;
@@ -2174,8 +2174,8 @@ label.error {
 .social-btn li a {
   display: block; }
   .social-btn li a i {
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 65px;
     line-height: 35px;
     text-align: center;
     -webkit-border-radius: 50%;
